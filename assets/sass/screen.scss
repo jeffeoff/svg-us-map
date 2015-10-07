@@ -1,0 +1,576 @@
+// map colors
+$border-color: #fff;
+$fill-color: #9c9c9c;
+$active-fill-color: #369;
+
+// change this value to scale the map up or down,
+// keeping all states in the proper positions relative to each other.
+$svg-scale: 1;
+
+// scale our state positioning based on the svg-scale.
+// don't change this value.
+$position-scale: $svg-scale/0.625 !global;
+
+.state-map-container {
+	text-align: center;
+}
+
+.state-map-container > ul {
+	display: inline-block;
+	width: 590px * $position-scale;
+	height: 380px * $position-scale;
+	padding: 0;
+	margin: 0;
+	position: relative;
+	pointer-events: none;
+
+	> li {
+		pointer-events: none;
+		list-style: none;
+		display: inline-block;
+		position: absolute;
+
+		div {
+			pointer-events: none;
+		}
+
+		p {
+			display: none;
+		}
+	}
+}
+
+.state-map-container svg {
+	pointer-events: none;
+
+	path {
+		pointer-events: fill;
+		fill: $fill-color;
+		stroke: $border-color;
+		stroke-width: 2px;
+		transform: scale( $svg-scale );
+
+		&:hover {
+			fill: $active-fill-color;
+		}
+	}
+}
+
+// ----------------------------
+// individual state positioning
+// ----------------------------
+.state-ak { // Alaska
+	top: 270px * $position-scale;
+	left: 22px * $position-scale;
+
+	svg {
+		width: $svg-scale * 209.189px;
+		height: $svg-scale * 155.68px;
+	}
+}
+
+.state-hi {
+	top: 328px * $position-scale;
+	left: 180px * $position-scale;
+
+	svg {
+		width: $svg-scale * 113.648px;
+		height: $svg-scale * 72.586px;
+	}
+}
+
+.state-wa { // Washington
+	top: 2px * $position-scale;
+	left: 40px * $position-scale;
+
+	svg {
+		width: $svg-scale * 118.044px;
+		height: $svg-scale * 87.026px;
+	}
+}
+
+.state-id { // Idaho
+	top: 15px * $position-scale;
+	left: 91px * $position-scale;
+
+	svg {
+		width: $svg-scale * 105.9px;
+		height: $svg-scale * 169.178px;
+	}
+}
+
+.state-mt { // Montana
+	top: 17px * $position-scale;
+	left: 118px * $position-scale;
+
+	svg {
+		width: $svg-scale * 179.025px;
+		height: $svg-scale * 114.802px;
+	}
+}
+
+.state-or { // Oregon
+	top: 35px * $position-scale;
+	left: 20px * $position-scale;
+
+	svg {
+		width: $svg-scale * 141.688px;
+		height: $svg-scale * 117.249px;
+	}
+}
+
+.state-wy { // Wyoming
+	top: 79px * $position-scale;
+	left: 148px * $position-scale;
+
+	svg {
+		width: $svg-scale * 122.774px;
+		height: $svg-scale * 102.957px;
+	}
+}
+
+.state-nd { // North Dakota
+	top: 33.5px * $position-scale;
+	left: 225px * $position-scale;
+
+	svg {
+		width: $svg-scale * 115.366px;
+		height: $svg-scale * 72.677px;
+	}
+}
+
+.state-sd { // South Dakota
+	top: 75px * $position-scale;
+	left: 222px * $position-scale;
+
+	svg {
+		width: $svg-scale * 123.388px;
+		height: $svg-scale * 82.931px;
+	}
+}
+
+.state-mn { // Minnesota
+	top: 31.5px * $position-scale;
+	left: 290px * $position-scale;
+
+	svg {
+		width: $svg-scale * 117.074px;
+		height: $svg-scale * 129.033px;
+	}
+}
+
+.state-wi { // Wisconsin
+	top: 64px * $position-scale;
+	left: 330px * $position-scale;
+
+	svg {
+		width: $svg-scale * 93.563px;
+		height: $svg-scale * 98.245px;
+	}
+}
+
+.state-mi { // Michigan
+	top: 46px * $position-scale;
+	left: 353px * $position-scale;
+
+	svg {
+		width: $svg-scale * 132.805px;
+		height: $svg-scale * 139.541px;
+	}
+}
+
+.state-ny { // New York
+	top: 66px * $position-scale;
+	left: 462px * $position-scale;
+
+	svg {
+		width: $svg-scale * 129.533px;
+		height: $svg-scale * 99.359px;
+	}
+}
+
+.state-vt { // Vermont
+	top: 62px * $position-scale;
+	left: 516px * $position-scale;
+
+	svg {
+		width: $svg-scale * 30.403px;
+		height: $svg-scale * 56.146px;
+	}
+}
+
+.state-nh { // New Hampshire
+	top: 57px * $position-scale;
+	left: 530px * $position-scale;
+
+	svg {
+		width: $svg-scale * 29.823px;
+		height: $svg-scale * 61.957px;
+	}
+}
+
+.state-me { // Maine
+	top: 23px * $position-scale;
+	left: 536px * $position-scale;
+
+	svg {
+		width: $svg-scale * 64.967px;
+		height: $svg-scale * 102.565px;
+	}
+}
+
+.state-ma { // Massachusetts
+	top: 88px * $position-scale;
+	left: 523px * $position-scale;
+
+	svg {
+		width: $svg-scale * 63.556px;
+		height: $svg-scale * 34.802px;
+	}
+}
+
+.state-ct { // Connecticut
+	top: 102px * $position-scale;
+	left: 524px * $position-scale;
+
+	svg {
+		width: $svg-scale * 31.035px;
+		height: $svg-scale * 30.941px;
+	}
+}
+
+.state-ri { // Rhode Island
+	top: 101px * $position-scale;
+	left: 540px * $position-scale;
+
+	svg {
+		width: $svg-scale * 16.033px;
+		height: $svg-scale * 18.153px;
+	}
+}
+
+.state-de { // Delaware
+	top: 142px * $position-scale;
+	left: 508px * $position-scale;
+
+	svg {
+		width: $svg-scale * 20.744px;
+		height: $svg-scale * 30.752px;
+	}
+}
+
+.state-ia { // Iowa
+	top: 110px * $position-scale;
+	left: 295px * $position-scale;
+	z-index: 12;
+
+	svg {
+		width: $svg-scale * 106.057px;
+		height: $svg-scale * 70.356px;
+	}
+}
+
+.state-il { // Illinois
+	top: 121px * $position-scale;
+	left: 347px * $position-scale;
+
+	svg {
+		width: $svg-scale * 71.061px;
+		height: $svg-scale * 125.688px;
+	}
+}
+
+.state-in { // Indiana
+	top: 130px * $position-scale;
+	left: 385px * $position-scale;
+
+	svg {
+		width: $svg-scale * 53.746px;
+		height: $svg-scale * 93.15px;
+	}
+}
+
+.state-oh { // Ohio
+	top: 121px * $position-scale;
+	left: 413px * $position-scale;
+
+	svg {
+		width: $svg-scale * 73.733px;
+		height: $svg-scale * 84.713px;
+	}
+}
+
+.state-pa { // Pennsylvania
+	top: 111px * $position-scale;
+	left: 455px * $position-scale;
+
+	svg {
+		width: $svg-scale * 101.294px;
+		height: $svg-scale * 66.399px;
+	}
+}
+
+.state-nj { // Conecticut
+	top: 118px * $position-scale;
+	left: 511px * $position-scale;
+
+	svg {
+		width: $svg-scale * 25.595px;
+		height: $svg-scale * 55.81px;
+	}
+}
+
+.state-ca { // California
+	top: 88px * $position-scale;
+	left: 13px * $position-scale;
+	z-index: 10;
+
+	svg {
+		width: $svg-scale * 141.446px;
+		height: $svg-scale * 240.992px;
+	}
+}
+
+.state-nv { // Nevada
+	top: 100px * $position-scale;
+	left: 52px * $position-scale;
+	z-index: 10;
+
+	svg {
+		width: $svg-scale * 111.896px;
+		height: $svg-scale * 172.811px;
+	}
+}
+
+.state-ut { // Utah
+	top: 114px * $position-scale;
+	left: 108px * $position-scale;
+
+	svg {
+		width: $svg-scale * 98.299px;
+		height: $svg-scale * 123.381px;
+	}
+}
+
+.state-co { // Colorado
+	top: 136px * $position-scale;
+	left: 161px * $position-scale;
+
+	svg {
+		width: $svg-scale * 127.754px;
+		height: $svg-scale * 100.384px;
+	}
+}
+
+.state-ne { // Nebraska
+	top: 115px * $position-scale;
+	left: 219px * $position-scale;
+	z-index: 10;
+
+	svg {
+		width: $svg-scale * 145.721px;
+		height: $svg-scale * 72.697px;
+	}
+}
+
+.state-ks { // Kansas
+	top: 157px * $position-scale;
+	left: 236px * $position-scale;
+	z-index: 10;
+
+	svg {
+		width: $svg-scale * 130.408px;
+		height: $svg-scale * 70.295px;
+	}
+}
+
+.state-mo { // Missouri
+	top: 149px * $position-scale;
+	left: 304px * $position-scale;
+
+	svg {
+		width: $svg-scale * 117.257px;
+		height: $svg-scale * 102.771px;
+	}
+}
+
+.state-ky { // Kentucky
+	top: 164px * $position-scale;
+	left: 371px * $position-scale;
+
+	svg {
+		width: $svg-scale * 129.04px;
+		height: $svg-scale * 66.183px;
+	}
+}
+
+.state-wv { // West Virginia
+	top: 138px * $position-scale;
+	left: 441px * $position-scale;
+
+	svg {
+		width: $svg-scale * 79.807px;
+		height: $svg-scale * 81.16px;
+	}
+}
+
+.state-md { // Maryland
+	top: 143px * $position-scale;
+	left: 470px * $position-scale;
+
+	svg {
+		width: $svg-scale *  81.279px;
+		height: $svg-scale * 42.993px;
+	}
+}
+
+.state-va { // Virginia
+	top: 151px * $position-scale;
+	left: 436px * $position-scale;
+
+	svg {
+		width: $svg-scale * 135.246px;
+		height: $svg-scale * 75.782px;
+	}
+}
+
+.state-dc { // District of Columbia
+	top: 153px * $position-scale;
+	left: 490px * $position-scale;
+	z-index: 11;
+
+	svg {
+		width: $svg-scale * 5.647px;
+		height: $svg-scale * 7.118px;
+	}
+}
+
+.state-az { // Arizona
+	top: 180px * $position-scale;
+	left: 87px * $position-scale;
+
+	svg {
+		width: $svg-scale * 119.897px;
+		height: $svg-scale * 140.172px;
+	}
+}
+
+.state-nm { // New Mexico
+	top: 190px * $position-scale;
+	left: 150px * $position-scale;
+
+	svg {
+		width: $svg-scale * 122.489px;
+		height: $svg-scale * 128.154px;
+	}
+}
+
+.state-ok { // Oklahoma
+	top: 197px * $position-scale;
+	left: 224px * $position-scale;
+
+	svg {
+		width: $svg-scale * 152.985px;
+		height: $svg-scale * 81.756px;
+	}
+}
+
+.state-tx { // Texas
+	top: 204px * $position-scale;
+	left: 179px * $position-scale;
+
+	svg {
+		width: $svg-scale * 244.913px;
+		height: $svg-scale * 240.336px;
+	}
+}
+
+.state-ar { // Arkansas
+	top: 205px * $position-scale;
+	left: 317px * $position-scale;
+
+	svg {
+		width: $svg-scale * 88.243px;
+		height: $svg-scale * 80.25px;
+	}
+}
+
+.state-tn { // Tennessee
+	top: 194px * $position-scale;
+	left: 363px * $position-scale;
+
+	svg {
+		width: $svg-scale * 149.337px;
+		height: $svg-scale * 52.16px;
+	}
+}
+
+.state-nc { // North Carolina
+	top: 183px * $position-scale;
+	left: 429px * $position-scale;
+
+	svg {
+		width: $svg-scale * 157.029px;
+		height: $svg-scale * 69.469px;
+	}
+}
+
+.state-la { // Louisiana
+	top: 254px * $position-scale;
+	left: 325px * $position-scale;
+
+	svg {
+		width: $svg-scale * 100.299px;
+		height: $svg-scale * 88.672px;
+	}
+}
+
+.state-ms { // Mississippi
+	top: 224px * $position-scale;
+	left: 353px * $position-scale;
+
+	svg {
+		width: $svg-scale * 63.021px;
+		height: $svg-scale * 110.785px;
+	}
+}
+
+.state-al { // Alabama
+	top: 222px * $position-scale;
+	left: 389px * $position-scale;
+
+	svg {
+		width: $svg-scale * 67.789px;
+		height: $svg-scale * 110.52px;
+	}
+}
+
+.state-ga { // Georgia
+	top: 218px * $position-scale;
+	left: 417px * $position-scale;
+
+	svg {
+		width: $svg-scale * 95.235px;
+		height: $svg-scale * 100.569px;
+	}
+}
+
+.state-sc { // South Carolina
+	top: 213px * $position-scale;
+	left: 442px * $position-scale;
+
+	svg {
+		width: $svg-scale * 90.431px;
+		height: $svg-scale * 68.821px;
+	}
+}
+
+.state-fl { // Florida
+	top: 273px * $position-scale;
+	left: 398px * $position-scale;
+
+	svg {
+		width: $svg-scale * 161.293px;
+		height: $svg-scale * 136.069px;
+	}
+}
